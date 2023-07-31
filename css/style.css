@@ -1,0 +1,692 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    transition: all 1s;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden!important;
+
+}
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+
+}
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --white:#fff;
+}
+/* Style header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 48px!important;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    /* width: 100%; */
+}
+header ul{
+    display: flex;
+    align-items: center;
+    margin: 0px!important;
+    display: flex;
+    align-items: center;
+
+    
+}
+header  .header-icons{
+    display: flex;
+    align-items: center;
+    
+}
+header h1 span{
+    color: var(--green);
+}
+header h1 {
+    color: var(--black);
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0px!important;
+
+}
+header ul li {
+  margin: 0px 10px!important;
+
+}
+header ul li a.actives, 
+header ul li a:hover {
+background-color: var(--green);
+color: var(--white);
+border-radius: 5px;
+}
+
+header ul li a{
+    color: var(--light-color);
+    font-size: 17px;
+padding: 5px 10px!important;
+}
+
+.header-icons div{
+padding: 5px!important;
+    width: 40px;
+    height: 40px;
+    background-color:rgba(128, 128, 128, 0.147);
+   margin: 0px 2px!important;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+border-radius: 50%;
+color: var(--black);
+cursor: pointer;
+}
+.header-icons div a{
+color: var(--black);
+}
+.header-icons div:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+.header-icons div:hover  a{
+    background-color: var(--green);
+    color: var(--white);
+    transform: rotate(360deg);
+}
+.header-icons div:hover  i{
+   
+    transform: rotate(360deg);
+}
+#menu{
+    display: none;
+}
+/* Style header ends */
+
+
+/* Search */
+
+.search{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.832);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search form {
+    position: relative;
+    width: 50%;
+}
+
+
+.search input {
+    background-color: transparent; 
+    border: 0px;
+    outline: none;
+padding: 10px 5px!important;
+width: 90%;
+border-bottom: 2px solid var(--white);
+color: var(--white);
+font-size: 25px;
+
+}
+
+.search input::placeholder{
+    color: var(--white);
+    font-size: 25px;
+
+}
+
+
+.search i{
+    color: var(--white);
+    font-size: 25px;
+}
+.search i:hover{
+    color: var(--green);
+    transform: rotate(360deg);
+    
+}
+
+.close-search{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.close-search i{
+    font-size: 40px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.close-search i:hover{
+   color: var(--green);
+   transform: rotate(180deg);
+   
+}
+
+/* Home Style */
+.home{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+ .home-item{
+height: 90vh;
+}
+ 
+.home-item  h3{
+color: var(--green);
+font-size: 18px;
+}
+.home-item  h4{
+color: var(--black);
+font-size: 90px;
+}
+.home-item  p{
+color: var(--light-color);
+font-size: 15px;
+
+}
+.home-item  a{
+background-color: var(--black);
+color: var(--white);
+padding: 10px 20px;
+border-radius: 5px;
+
+}
+.home-item  a:hover{
+background-color: var(--green);
+padding: 10px 30px;
+
+}
+.carousel-img .pizza{
+    animation: rotatePizza 10s infinite alternate ;
+}
+
+@keyframes rotatePizza{
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);}
+}
+
+
+/* recipes */
+.recipes{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    
+}
+.recipes-items{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.recipes-items::-webkit-scrollbar {
+    display: none;
+}
+
+.re-item{
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.recipes h2{
+    color: var(--green);
+    font-size: 20px;
+}
+.recipes h3{
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.re-item h6{
+    margin-top: 10px;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 20px;
+}
+.re-item p{
+    margin-top: 10px;
+ color: var(--green);
+ font-weight: 900;
+}
+/* dishes */
+.dishes{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+
+}
+
+.dishes h2{
+    color: var(--green);
+    font-size: 20px;
+}
+.dishes h3{
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 700;
+}
+.dishes-item{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+.dishes-item h6{
+color: var(--black);
+font-size: 25px;
+font-weight: 600;
+margin: 0px!important;
+margin-top: 10px!important;
+}
+.dishes-item .dishes-icons {
+margin: 10px 0px!important;
+}
+.dishes-item .dishes-icons i{
+color: var(--green);
+font-size: 15px;
+}
+.dishes-item a{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.dishes-item span{
+    color: var(--green);
+    font-size: 20px;
+    font-weight: 600;
+}
+.dishes-item:hover a{
+    background-color: var(--green);
+    padding: 5px 20px;
+}
+.view-love .view-item div{
+    padding: 5px!important;
+    width: 40px;
+    height: 40px;
+    background-color:rgba(128, 128, 128, 0.592);
+   margin: 0px 2px!important;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+border-radius: 50%;
+color: var(--black);
+cursor: pointer;
+}
+
+
+.view-love .view-item div a{
+    color: var(--black);
+    }
+    .view-love .view-item div:hover{
+        background-color: var(--green);
+        color: var(--white);
+    }
+    .view-love .view-item div a:hover  {
+        background-color: var(--green);
+        color: var(--white);
+        transform: rotate(360deg);
+    }
+    .view-love .view-item div:hover  i{
+       
+        transform: rotate(360deg);
+    }
+
+
+    .view-love{
+        position: absolute;
+        top: 30px;
+        left: 100%;
+        right: 20px;
+        overflow: hidden;
+        
+    }
+
+
+    .dishes-item:hover .view-love{
+left: 20px;
+    }
+    /* About Section */
+    
+    .about{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    }
+  .about h2{
+        color: var(--green);
+        font-size: 20px;
+    }
+  .about h3{
+        color: var(--black);
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .about-caption h4{
+color: var(--black);
+font-size: 35px;
+margin-bottom:20px ;
+    }
+    .about-caption p{
+color: var(--light-color);
+font-size: 17px;
+    }
+
+    
+    .about-btn {
+display: flex;
+flex-wrap: wrap;
+
+}
+    .about-btn button{
+border: var(--light-color) solid 1px;
+padding: 5px 20px;
+font-weight: 600;
+color: var(--black);
+border-radius: 5px;
+margin: 5px 5px;
+width: 200px;
+transition: all 1s;
+}
+.about-btn span{
+    color: var(--green);
+    font-size: 20px;
+    margin-right: 5px;
+}
+    
+    .about a{
+        background-color: var(--black);
+        color: var(--white);
+        padding: 10px 30px;
+        border-radius: 5px;
+    }
+    .about a:hover{
+        background-color: var(--green);
+        padding: 10px 40px;
+    }
+
+    .about-btn button:hover{
+        background-color: var(--black);
+        color: var(--white);
+        border: none;
+        }
+
+        /* Customer Seaction */
+    .owl-carousel .item {
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 18px 50px -10px;
+        border: solid 1px  rgba(0, 0, 0, 0.033);
+    }
+
+        .owl-carousel .item .user-data{
+            display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        
+    
+            
+        }
+        .owl-carousel .item .user-data div img{
+           width: 70px;
+           height: 70px;
+           border-radius: 50%;
+            
+        }
+        .owl-carousel .item .user-data h5{
+          color: var(--black);
+          font-weight: 800;
+            
+        }
+        .owl-carousel .item .user-data .left-side {
+  display: flex;
+  align-items: center;
+ 
+}
+        .owl-carousel .item .user-data .left-side i {
+  font-size: 12px;
+  color: var(--green);
+ 
+}
+        .owl-carousel .item .user-data .right-side i {
+color: #66666644;
+font-size: 70px;
+}
+.owl-carousel .item p{
+    padding: 10px;
+    color: var(--light-color);
+    font-size: 16px;
+}
+
+.customer  h2{
+    color: var(--green);
+    font-size: 20px;
+    text-align: center;
+}
+.customer  h3{
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+/* order Section */
+.order h2{
+    color: var(--green);
+    font-size: 20px;
+    text-align: center;
+}
+.order h3{
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+
+}
+.order-form{
+    width: 70%;
+    margin: auto;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.084) 0px 18px 50px -10px;
+        border: solid 1px  rgba(0, 0, 0, 0.082);
+}
+.order-form form input ,
+.order-form form textarea
+{
+    border:none;
+    background-color: #6666660f;
+    padding: 12px;
+    outline: none;
+    border-radius: 7px;
+}
+
+
+.order-form form label 
+{
+    color: var(--light-color);
+    font-weight: 600;
+}
+
+
+.order-form button{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 35px;
+    border-radius: 5px;
+    border: none;
+    
+    }
+    .order-form button:hover{
+    background-color: var(--green);
+    padding: 10px 45px;
+    
+    }
+    /* team section */
+    .team{
+        background-image: url(../image/gallery_08.jpg);
+        background-position: center center ;
+        background-size: cover;
+        background-attachment: fixed;
+    /* height: 70vh; */
+    }
+    .team .layout{
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 0, 0, 0.821);
+    }
+
+    .team .layout h2{
+        color: var(--white);
+        font-size: 40px;
+        font-weight: 700;
+    }
+.team-item{
+    position: relative;
+    overflow: hidden;
+    
+}
+.team-item .team-caption {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.61);
+
+    
+}
+
+.team-item .team-caption h5 {
+   color: var(--green);
+   font-size: 35px;
+   font-weight: 700;
+    
+}
+.team-item .team-caption p {
+  color: var(--white);
+  font-size: 15px;
+    
+}
+.team-item .team-caption hr {
+  color: var(--white);
+font-weight: 900;
+    
+}
+
+.team-item:hover .team-caption{
+    top: 0px;
+}
+.team-item:hover img{
+    transform: scale(1.1,1.1);
+}
+.team-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.team-icons div{
+   width: 35px;
+   height: 35px;
+   border: 1px solid var(--white);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--white);
+   margin: 0px 10px;
+   cursor: pointer;
+}
+
+.team-icons div:hover{
+  background-color: var(--green);
+  border: none;
+}
+
+/* footer Style */
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+}
+footer h1 span{
+    color: var(--green);
+}
+footer h1{
+    font-size: 35px;
+    font-weight: 900;
+    margin: 0px!important;
+}
+.footer-links a{
+    color: var(--white);
+}
+.footer-links a:hover{
+    color: var(--green);
+}
+.contact-us span{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color:#6666666f;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us span:hover{
+    background-color: var(--green);
+    color: var(--black);
+}
+.contact-us p:last-child{
+   color: var(--green);
+}
+footer h6{
+    font-weight: 700;
+    color: var(--green);
+    font-size: 25px;
+    margin-bottom:20px ;
+}
+.open-hours p{
+font-size: 14px;
+}
+
+.footer-icons{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+.footer-icons div{
+   width: 35px;
+   height: 35px;
+   border: 1px solid var(--white);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--white);
+margin-left:0px!important ;
+   margin: 0px 5px;
+   cursor: pointer;
+}
+
+.footer-icons div:hover{
+  background-color: var(--green);
+  border: none;
+}
